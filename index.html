@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="calculator">
+            <input name="leftNumber" type="number" 
+                    onkeypress='return 
+                    event.charCode >= 48 && event.charCode <= 57'>
+
+            <select name="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input name="rightNumber" type="number" 
+                    onkeypress='return 
+                    event.charCode >= 48 && event.charCode <= 57'>
+            <div class="res">
+                <h3>Результат:</h3>
+                <input id="copy" value=''/>
+            </div>
+            <input name="btnRes" type="button" value="Получить результат">
+            <h4>История:</h4>
+            <div class="history">
+            </div>
+        </div>
+    </div>
+    <script src='./main.js'></script>
+</body>
+</html>
